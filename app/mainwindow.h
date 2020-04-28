@@ -174,8 +174,7 @@ private:
 
     QUndoStack *undoStack;
     QUndoView *undoView;
-    // statusbar label
-    QLabel *m_posInfo;
+
 };
 
 #endif // MAINWINDOW_H

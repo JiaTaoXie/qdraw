@@ -14,14 +14,14 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     undoStack = new QUndoStack(this);
-    undoView = new QUndoView(undoStack);
-    undoView->setWindowTitle(tr("Command List"));
-    undoView->setAttribute(Qt::WA_QuitOnClose, false);
+//    undoView = new QUndoView(undoStack);
+//    undoView->setWindowTitle(tr("Command List"));
+//    undoView->setAttribute(Qt::WA_QuitOnClose, false);
 
-    QDockWidget *dock = new QDockWidget(this);
-    addDockWidget(Qt::RightDockWidgetArea, dock);
+//    QDockWidget *dock = new QDockWidget(this);
+//    addDockWidget(Qt::RightDockWidgetArea, dock);
 
-    dock->setWidget(undoView);
+//    dock->setWidget(undoView);
 
     mdiArea = new QMdiArea;
     mdiArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
@@ -40,17 +40,12 @@ MainWindow::MainWindow(QWidget *parent)
     createActions();
     createMenus();
     createToolbars();
-    createToolBox();
-    createPropertyEditor();
+//    createToolBox();
+//    createPropertyEditor();
 
     newFile();
     mdiArea->tileSubWindows();
- /*
-    m_posInfo = new QLabel(tr("x,y"));
-    m_posInfo->setMinimumSize(m_posInfo->sizeHint());
-    m_posInfo->setAlignment(Qt::AlignHCenter);
-    statusBar()->addWidget(m_posInfo);
-*/
+
     connect(QApplication::clipboard(),SIGNAL(dataChanged()),this,SLOT(dataChanged()));
     connect(&m_timer,SIGNAL(timeout()),this,SLOT(updateActions()));
     m_timer.start(500);

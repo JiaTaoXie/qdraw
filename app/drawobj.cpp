@@ -11,6 +11,7 @@
 #include <QStyleOptionGraphicsItem>
 #include <cmath>
 #include "drawscene.h"
+#include <qmath.h>
 
 ShapeMimeData::ShapeMimeData(QList<QGraphicsItem *> items)
 {

@@ -21,7 +21,7 @@ SOURCES += main.cpp\
     sizehandle.cpp \
     objectcontroller.cpp \
     customproperty.cpp \
-    rulebar.cpp \
+#    rulebar.cpp \
     drawview.cpp \
     commands.cpp \
     document.cpp
@@ -33,7 +33,7 @@ HEADERS  += mainwindow.h \
     sizehandle.h \
     objectcontroller.h \
     customproperty.h \
-    rulebar.h \
+#    rulebar.h \
     drawview.h \
     commands.h \
     document.h
